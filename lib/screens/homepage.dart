@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
             "data is here",
             style: TextStyle(
                 fontSize: 50,
-                color: Colors.deepPurple
+                color: Colors.red
             ),
           ),
       ),
