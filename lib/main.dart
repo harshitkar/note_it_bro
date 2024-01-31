@@ -1,7 +1,9 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:note_it_bro/firebase_options.dart';
 import 'package:note_it_bro/screens/homepage.dart';
 
-void main() {
+void main(){
   runApp(const MyApp());
 }
 

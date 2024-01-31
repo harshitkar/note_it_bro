@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                         TextFormField(
                           style: const TextStyle(color: Colors.white),
                           decoration: const InputDecoration(label: Text("Username",style: TextStyle(color: Colors.cyan),)),
-                          cursorColor: Colors.cyanAccent[100],
+                          cursorColor: Colors.cyanAccent[200],
                           validator: (value) {
                             if (value == null || value.isEmpty || !value.contains('@')) {
                               return 'Please enter some valid text';
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                         TextFormField(
                           style: const TextStyle(color: Colors.white),
                           decoration: const InputDecoration(label: Text("Password",style: TextStyle(color: Colors.cyan),)),
-                          cursorColor: Colors.cyanAccent[100],
+                          cursorColor: Colors.cyanAccent[200],
                           validator: (value) {
                             if (value == null || value.isEmpty || value.length < 7) {
                               return 'Please enter some valid text';
@@ -61,8 +61,8 @@ class _HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.all(10.0),
                           child: ElevatedButton(
                               onPressed: () { _formKey.currentState!.validate(); },
+                              style: ElevatedButton.styleFrom(foregroundColor: Colors.white, backgroundColor: Colors.blueAccent[100]),
                               child: const Text("Submit"),
-                              style: ElevatedButton.styleFrom(primary: Colors.blueAccent[100],onPrimary: Colors.white),
                           ),
                         )
                       ],
