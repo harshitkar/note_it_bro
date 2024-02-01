@@ -67,6 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '335447718566',
     projectId: 'notes-098',
     storageBucket: 'notes-098.appspot.com',
+    iosClientId: '335447718566-jjs7isv88b3d8scgmg8hnd5g3jg12ihc.apps.googleusercontent.com',
     iosBundleId: 'com.gdsc.noteItBro',
   );
 
@@ -76,6 +77,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '335447718566',
     projectId: 'notes-098',
     storageBucket: 'notes-098.appspot.com',
+    iosClientId: '335447718566-lophe37viheqta0dlaooclqmhu3l466g.apps.googleusercontent.com',
     iosBundleId: 'com.gdsc.noteItBro.RunnerTests',
   );
 }
