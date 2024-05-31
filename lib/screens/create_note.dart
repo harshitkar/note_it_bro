@@ -10,7 +10,7 @@ class CreateNote extends StatefulWidget {
 }
 
 class _CreateNoteState extends State<CreateNote> {
-  final auth=FirebaseAuth.instance.currentUser!.email;
+  final auth = FirebaseAuth.instance.currentUser!.email;
 
   final _formKey = GlobalKey<FormState>();
 
@@ -23,13 +23,10 @@ class _CreateNoteState extends State<CreateNote> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.cyan,
-        title: const Text(
-          'Create Note',
-          style: TextStyle(color: Colors.white)
-        ),
+        title: const Text('Create Note', style: TextStyle(color: Colors.white)),
         actions: [
           IconButton(
-            onPressed: ()async {
+            onPressed: () async {
               _formKey.currentState!.validate();
               if (!_formKey.currentState!.validate()) {
                 return;
@@ -38,9 +35,9 @@ class _CreateNoteState extends State<CreateNote> {
               await FirebaseFirestore.instance.collection(auth!).add({
                 'title': title,
                 'content': content,
-                'time':DateTime.now(),
+                'time': DateTime.now(),
               });
-              if(context.mounted){
+              if (context.mounted) {
                 Navigator.of(context).pop();
               }
             },
@@ -73,8 +70,8 @@ class _CreateNoteState extends State<CreateNote> {
                   }
                   return null;
                 },
-                onSaved: (value){
-                  title=value!;
+                onSaved: (value) {
+                  title = value!;
                 },
               ),
               Expanded(
@@ -89,8 +86,8 @@ class _CreateNoteState extends State<CreateNote> {
                     }
                     return null;
                   },
-                  onSaved: (value){
-                    content=value!;
+                  onSaved: (value) {
+                    content = value!;
                   },
                 ),
               ),

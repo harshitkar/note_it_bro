@@ -3,7 +3,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:note_it_bro/Auth/auth_service.dart';
 import 'package:note_it_bro/Widgets/show_dialog.dart';
-
 import 'create_note.dart';
 
 class Notes extends StatelessWidget {
@@ -19,6 +18,7 @@ class Notes extends StatelessWidget {
         title: const Text('Notes',style: TextStyle(color: Colors.white)),
         actions: [
           IconButton(
+
             onPressed: () {
               AuthService().signOut(context);
             },
@@ -44,7 +44,8 @@ class Notes extends StatelessWidget {
                     return GestureDetector(
                       onLongPress: (){
                           showDialog(context: context,
-                            builder:(BuildContext context)=>showDialogQ(context,documents[index]['title'])
+                            builder:(BuildContext context)=>showDialogQ(context,documents[index]['title']
+                            )
                         );
                       },
                       child: Card(
