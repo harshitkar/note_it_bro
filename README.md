@@ -5,22 +5,28 @@ A simple note-taking Flutter application with user authentication and notes CRUD
 
 ### Visual Representation of Application
 
-*Description:* Where all notes are visible in a grid layout. Also, users can log out from here.
+*Description:* Where all notes are visible in a grid layout. Also, users can log out from here.  
+<br>
 <img src="https://drive.google.com/uc?id=1HFDig87EMLC4Yg9et1h-h4KnEJmoK10-" alt="Home Page" width="200"/>
 
-*Description:* Existing notes are updated here.
+*Description:* Existing notes are updated here.  
+<br>
 <img src="https://drive.google.com/uc?id=1HFhVyiH-8thsQbUa7auD9wM8hIl_Wr_F" alt="Edit Note Page" width="200"/>
 
-*Description:* Delete note dialog box appears on long pressing the note card views.
+*Description:* Delete note dialog box appears on long pressing the note card views. 
+<br>
 [![Delete Note](https://drive.google.com/thumbnail?id=1HGRYnfoCXpkxgS5iz8-bC_xmoh6d14fE)](https://drive.google.com/file/d/1HGRYnfoCXpkxgS5iz8-bC_xmoh6d14fE/view?usp=sharing)
 
-*Description:* New users can register here.
+*Description:* New users can register here.  
+<br>
 <img src="https://drive.google.com/uc?id=1HTtO2ERI9Q1fOog3uXUUytonsHYeiXzy" alt="SignUp Page" width="200"/>
 
-*Description:* Existing users can sign in from here.
+*Description:* Existing users can sign in from here.  
+<br>
 <img src="https://drive.google.com/uc?id=1HTwEe_GLiudq6xn_qWk_MIpV3EK4_1Nm" alt="Login Page" width="200"/>
 
-*Description:* New notes are created and saved here.
+*Description:* New notes are created and saved here. 
+<br>
 <img src="https://drive.google.com/uc?id=1H_lVuzYw7NnkUl9Qn_11pHE2YJHUjuZK" alt="Create Note Page" width="200"/>
 
 Click the images for a closer view of each feature.
