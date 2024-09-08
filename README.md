@@ -11,7 +11,7 @@ A simple note-taking Flutter application with user authentication and notes CRUD
 <img src="https://drive.google.com/uc?id=1HFhVyiH-8thsQbUa7auD9wM8hIl_Wr_F" alt="Edit Note Page" width="600"/>
 *Description:* Existing notes are updated here.
 
-<img src="https://drive.google.com/uc?id=1HGRYnfoCXpkxgS5iz8-bC_xmoh6d14fE" alt="Delete Note" width="600"/>
+[![Delete Note](https://drive.google.com/thumbnail?id=1HGRYnfoCXpkxgS5iz8-bC_xmoh6d14fE)](https://drive.google.com/file/d/1HGRYnfoCXpkxgS5iz8-bC_xmoh6d14fE/view?usp=sharing)
 *Description:* Delete note dialog box appears on long pressing the note card views.
 
 <img src="https://drive.google.com/uc?id=1HTtO2ERI9Q1fOog3uXUUytonsHYeiXzy" alt="SignUp Page" width="600"/>
