@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:note_it_bro/Auth/auth_service.dart';
-import 'package:note_it_bro/screens/sign_up.dart';
+import 'package:note_it_bro/pages/LoginPage.dart';  // Make sure to import LoginPage
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class SignupPage extends StatefulWidget {
+  const SignupPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<SignupPage> createState() => _SignupPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _SignupPageState extends State<SignupPage> {
   final _formKey = GlobalKey<FormState>();
   String id = '';
   String password = '';
+  String confirmPassword = '';
 
   @override
   Widget build(BuildContext context) {
@@ -39,12 +40,10 @@ class _HomePageState extends State<HomePage> {
                           ),
                           TextFormField(
                             style: const TextStyle(color: Colors.white),
-                            cursorColor: Colors.cyan,
-                            decoration:const InputDecoration(
-                              label: Text("ID",style: TextStyle(color: Colors.white),),
-                              labelStyle: TextStyle(
-                                color: Colors.white,
-                              ),
+                            cursorColor: Colors.white,
+                            decoration: const InputDecoration(
+                              label: Text("Email ID", style: TextStyle(color: Colors.white)),
+                              labelStyle: TextStyle(color: Colors.white),
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white),
                               ),
@@ -52,12 +51,11 @@ class _HomePageState extends State<HomePage> {
                                 borderSide: BorderSide(color: Colors.transparent),
                               ),
                             ),
-                            // The validator receives the text that the user has entered.
                             validator: (value) {
                               if (value == null ||
                                   value.isEmpty ||
                                   !value.contains('@')) {
-                                return 'Please enter some valid email';
+                                return 'Please enter a valid email';
                               }
                               return null;
                             },
@@ -67,12 +65,10 @@ class _HomePageState extends State<HomePage> {
                           ),
                           TextFormField(
                             style: const TextStyle(color: Colors.white),
-                            cursorColor: Colors.cyan,
+                            cursorColor: Colors.white,
                             decoration: const InputDecoration(
-                              label: Text("Password",style: TextStyle(color: Colors.white),),
-                              labelStyle: TextStyle(
-                                color: Colors.white,
-                              ),
+                              label: Text("Password", style: TextStyle(color: Colors.white)),
+                              labelStyle: TextStyle(color: Colors.white),
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white),
                               ),
@@ -80,11 +76,10 @@ class _HomePageState extends State<HomePage> {
                                 borderSide: BorderSide(color: Colors.transparent),
                               ),
                             ),
+                            obscureText: true,
                             validator: (value) {
-                              if (value == null ||
-                                  value.isEmpty ||
-                                  value.length < 7) {
-                                return 'Please enter some valid email';
+                              if (value == null || value.isEmpty || value.length < 7) {
+                                return 'Please enter a valid password';
                               }
                               return null;
                             },
@@ -92,32 +87,55 @@ class _HomePageState extends State<HomePage> {
                               password = value!;
                             },
                           ),
+                          TextFormField(
+                            style: const TextStyle(color: Colors.white),
+                            cursorColor: Colors.cyan,
+                            decoration: const InputDecoration(
+                              label: Text("Confirm Password", style: TextStyle(color: Colors.white)),
+                              labelStyle: TextStyle(color: Colors.white),
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(color: Colors.white),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(color: Colors.transparent),
+                              ),
+                            ),
+                            obscureText: true,
+                            validator: (value) {
+                              if (value != password) {
+                                return 'Passwords do not match';
+                              }
+                              return null;
+                            },
+                            onSaved: (value) {
+                              confirmPassword = value!;
+                            },
+                          ),
                         ],
                       ),
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {
+                    onPressed: () async {
                       _formKey.currentState!.validate();
                       if (!_formKey.currentState!.validate()) {
                         return;
                       }
                       _formKey.currentState!.save();
-                      AuthService().signInWithEmail(id, password);
+                      await AuthService().createUser(id, password);
+                      Navigator.of(context).pop();
                     },
-                    child: const Text('submit',style: TextStyle(color: Colors.cyan),),
-                  ),
-                  IconButton(
-                    onPressed: () {
-                      AuthService().signInWithGoogle(context);
-                    },
-                    icon: const Icon(Icons.login),
+                    child: const Text('Sign Up'),
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.cyan,
+                      backgroundColor: Colors.white,
+                    ),
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SignUp()));
+                      Navigator.of(context).pop(); // Go back to LoginPage
                     },
-                    child: const Text("Create user",style: TextStyle(color: Colors.white),),
+                    child: const Text("Already a user? Login", style: TextStyle(color: Colors.white)),
                   ),
                 ],
               ),
