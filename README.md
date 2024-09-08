@@ -1,16 +1,25 @@
 # note_it_bro
 
-A new Flutter project to share it with everyone.
+## Description
+A simple note-taking Flutter application with user authentication and notes CRUD features using firebase Auth and firebase database respectively.
 
-## Getting Started
+### Visual representation of Application
+![Home Page](https://drive.google.com/uc?id=1HFDig87EMLC4Yg9et1h-h4KnEJmoK10-)
+*Description:* where all notes are visible in grid layout. Also user can logout from here.
 
-This project is a starting point for a Flutter application.
+![Edit Note Page](https://drive.google.com/uc?id=1HFhVyiH-8thsQbUa7auD9wM8hIl_Wr_F)
+*Description:* Existing notes are updated here.
 
-A few resources to get you started if this is your first Flutter project:
+![Delete Note](https://drive.google.com/file/d/1HGRYnfoCXpkxgS5iz8-bC_xmoh6d14fE/view?usp=sharing)
+*Description:* Delete note Dialog box appears on long pressing the note cardViews.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![SignUp Page](https://drive.google.com/uc?id=1HTtO2ERI9Q1fOog3uXUUytonsHYeiXzy)
+*Description:* New users can register here.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Login Page](https://drive.google.com/uc?id=1HTwEe_GLiudq6xn_qWk_MIpV3EK4_1Nm)
+*Description:* Existing users can signin from here.
+
+![Create Note Page](https://drive.google.com/uc?id=1H_lVuzYw7NnkUl9Qn_11pHE2YJHUjuZK)
+*Description:* New notes are created and saved here.
+
+Click the images for a closer view of each feature.
